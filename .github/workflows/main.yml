@@ -32,15 +32,30 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Qué hay en este directorio?
+          echo 1. Qué hay en este directorio?
           ls -a
           echo
-          echo Java estA instalado?
+          echo 2. Java está instalado?
           java --version
           echo 
-          echo Git está instalado?
+          echo 3. Git está instalado?
           git --version
-          echo Y qué herramientas hay?
+          echo 4. Y qué herramientas hay?
           mvn --version
           gradle --version
           ant -version
+          echo 5. Donde está el Root de Android SDK?
+          echo $ANDRIOD_SDK_ROOT
+          echo
+          echo 6. Donde están los jars de Selenium?
+          echo $SELENIUM_JAR_PATH
+          echo
+          echo 7. Dónde está ubicado el espacio de trabajo?
+          echo $RUNNER_WORKSPACE
+          echo
+          echo 8. Quien corre este script?
+          whoami
+          echo 9. Cómo se presenta el disco?
+          df
+          echo 10. Qué variables ambientales están disponibles?
+          env
